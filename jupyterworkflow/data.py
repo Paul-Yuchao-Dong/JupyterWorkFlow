@@ -4,9 +4,10 @@ import pandas as pd
 
 URL = 'https://data.seattle.gov/api/views/65db-xm6k/rows.csv?accessType=DOWNLOAD'
 
-def get_fremont_data(filename="Fremont.csv",\
-    url = URL, 
-    force_download = False):
+
+def get_fremont_data(filename="Fremont.csv",
+                     url=URL,
+                     force_download=False):
     """Download and cache fremont date
     Parameters
     -----------
@@ -31,5 +32,5 @@ def get_fremont_data(filename="Fremont.csv",\
         data.index = pd.to_datetime(data.index)
 
     data.columns = ['West', 'East']
-    data['Total'] = data.sum(axis = 1)
+    data['Total'] = data.sum(axis=1)
     return data
