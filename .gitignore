@@ -90,6 +90,3 @@ ENV/
 
 #data
 *.csv
-
-#vscode
-.vscode
